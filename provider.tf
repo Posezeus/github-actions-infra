@@ -6,15 +6,13 @@ terraform {
     }
   }
 
-  /*backend "s3" {
-    bucket = "cedric-test-mineee"
+  backend "s3" {
+    bucket = "cedric-test-infotech"
     key    = "state.tfstate"
-    profile = "cedricproflie"
     region = "us-west-1"
-  }*/
+  }
 }
 
 provider "aws" {
   region  = var.region
-  profile ="cedricprofile"
 }
