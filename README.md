@@ -1,2 +1,2 @@
 # github-actions-infra
-Deploying terraform code to AWS using GitHub actions 
+Deploying terraform code to AWS using GitHub actions.
