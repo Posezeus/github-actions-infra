@@ -7,7 +7,7 @@ resource "aws_eip" "nat-eip" {
   }
 }
 resource "aws_nat_gateway" "nat-gateway-demo" {
-for_each = { for index, subnet_id in dvar.public-subnets-ids : index => subnet_id }
+for_each = { for index, subnet_id in var.public-subnets-ids : index => subnet_id }
 
   subnet_id     = each.value
   allocation_id = aws_eip.nat-eip.id
